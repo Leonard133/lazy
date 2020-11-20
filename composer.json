@@ -1,0 +1,54 @@
+{
+    "name": "leonard133/lazy",
+    "description": "Package that make you lazy.",
+    "keywords": [
+        "leonard133",
+        "lazy"
+    ],
+    "homepage": "https://github.com/leonard133/lazy",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Leonard Lee",
+            "email": "leonard13396@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leonard133\\Lazy\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Leonard133\\Lazy\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leonard133\\Lazy\\LazyServiceProvider"
+            ],
+            "aliases": {
+                "Lazy": "Leonard133\\Lazy\\LazyFacade"
+            }
+        }
+    }
+}
