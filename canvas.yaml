@@ -1,0 +1,26 @@
+preset: package
+
+namespace: Leonard133\Lazy
+
+paths:
+  src: src
+  resource: resources
+
+factory:
+  path: database/factories
+
+migration:
+  path: database/migrations
+  prefix: ''
+
+console:
+  namespace: Leonard133\Lazy\Console
+
+model:
+  namespace: Leonard133\Lazy
+
+provider:
+  namespace: Leonard133\Lazy\Providers
+
+testing:
+  namespace: Leonard133\Lazy\Tests

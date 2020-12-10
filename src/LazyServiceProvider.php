@@ -3,6 +3,8 @@
 namespace Leonard133\Lazy;
 
 use Illuminate\Support\ServiceProvider;
+use Leonard133\Lazy\Console\GuardCommand;
+use Leonard133\Lazy\Console\PackageCommand;
 
 class LazyServiceProvider extends ServiceProvider
 {
@@ -40,7 +42,10 @@ class LazyServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+             $this->commands([
+                 GuardCommand::class,
+                 PackageCommand::class
+             ]);
         }
     }
 
@@ -53,8 +58,8 @@ class LazyServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'lazy');
 
         // Register the main class to use with the facade
-        $this->app->singleton('lazy', function () {
-            return new Lazy;
-        });
+//        $this->app->singleton('lazy', function () {
+//            return new Lazy;
+//        });
     }
 }
